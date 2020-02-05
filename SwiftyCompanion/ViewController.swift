@@ -49,6 +49,7 @@ class ViewController: UIViewController {
             super.viewDidLoad()
             searchButton.isEnabled = false
             view.backgroundColor = UIColor(patternImage: UIImage(named: "42_bg")!)
+            
             auth.getToken()
             
             // remove this segue
@@ -78,7 +79,6 @@ class ViewController: UIViewController {
                 destination.json = json
             }
         }
-        
     }
 
     extension ViewController: UITextFieldDelegate {
