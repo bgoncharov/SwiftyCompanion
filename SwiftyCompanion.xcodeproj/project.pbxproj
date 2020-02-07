@@ -17,6 +17,7 @@
 		A177DEF823EA3D8900883F36 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177DEF723EA3D8900883F36 /* Auth.swift */; };
 		A177DEF923EA558B00883F36 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177DEF523EA3BC500883F36 /* ProfileViewController.swift */; };
 		A177DEFB23EA569900883F36 /* SearchUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177DEFA23EA569900883F36 /* SearchUIButton.swift */; };
+		A177DEFD23ECDFE000883F36 /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A177DEFC23ECDFE000883F36 /* TableViewCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A177DEF523EA3BC500883F36 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A177DEF723EA3D8900883F36 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		A177DEFA23EA569900883F36 /* SearchUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIButton.swift; sourceTree = "<group>"; };
+		A177DEFC23ECDFE000883F36 /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
 		B69175CAA80F7ABFC98FF82E /* Pods-SwiftyCompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyCompanion.release.xcconfig"; path = "Target Support Files/Pods-SwiftyCompanion/Pods-SwiftyCompanion.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				A177DEE023E8F94700883F36 /* ViewController.swift */,
 				A177DEFA23EA569900883F36 /* SearchUIButton.swift */,
 				A177DEE223E8F94700883F36 /* Main.storyboard */,
+				A177DEFC23ECDFE000883F36 /* TableViewCells.swift */,
 				A177DEF723EA3D8900883F36 /* Auth.swift */,
 				A177DEF523EA3BC500883F36 /* ProfileViewController.swift */,
 				A177DEE523E8F95400883F36 /* Assets.xcassets */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A177DEFD23ECDFE000883F36 /* TableViewCells.swift in Sources */,
 				A177DEF823EA3D8900883F36 /* Auth.swift in Sources */,
 				A177DEFB23EA569900883F36 /* SearchUIButton.swift in Sources */,
 				A177DEE123E8F94700883F36 /* ViewController.swift in Sources */,
@@ -367,6 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftyCompanion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,6 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftyCompanion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
