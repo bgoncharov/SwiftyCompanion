@@ -90,17 +90,25 @@
 			children = (
 				A177DEDC23E8F94700883F36 /* AppDelegate.swift */,
 				A177DEDE23E8F94700883F36 /* SceneDelegate.swift */,
-				A177DEE023E8F94700883F36 /* ViewController.swift */,
+				A177DEFF23EDE55F00883F36 /* ViewControllers */,
 				A177DEFA23EA569900883F36 /* SearchUIButton.swift */,
 				A177DEE223E8F94700883F36 /* Main.storyboard */,
 				A177DEFC23ECDFE000883F36 /* TableViewCells.swift */,
 				A177DEF723EA3D8900883F36 /* Auth.swift */,
-				A177DEF523EA3BC500883F36 /* ProfileViewController.swift */,
 				A177DEE523E8F95400883F36 /* Assets.xcassets */,
 				A177DEE723E8F95400883F36 /* LaunchScreen.storyboard */,
 				A177DEEA23E8F95400883F36 /* Info.plist */,
 			);
 			path = SwiftyCompanion;
+			sourceTree = "<group>";
+		};
+		A177DEFF23EDE55F00883F36 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A177DEE023E8F94700883F36 /* ViewController.swift */,
+				A177DEF523EA3BC500883F36 /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
