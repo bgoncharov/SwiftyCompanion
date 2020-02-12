@@ -181,20 +181,37 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lavel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-le-b4a" userLabel="Lavel">
+                                                <rect key="frame" x="187" y="209.5" width="40" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1iA-0w-EE5" userLabel="Lavel Progress">
+                                                <rect key="frame" x="20" y="238" width="374" height="2"/>
+                                                <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.80392169950000003" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="zP0-fM-iR5" firstAttribute="top" secondItem="hfP-fq-uI9" secondAttribute="top" id="1Zq-mL-gp6"/>
+                                            <constraint firstItem="1iA-0w-EE5" firstAttribute="leading" secondItem="hfP-fq-uI9" secondAttribute="leading" constant="20" symbolic="YES" id="1oc-dp-Qjl"/>
                                             <constraint firstAttribute="bottom" secondItem="zP0-fM-iR5" secondAttribute="bottom" id="9Il-aL-HFW"/>
+                                            <constraint firstItem="wfC-le-b4a" firstAttribute="top" secondItem="lnk-kU-tEg" secondAttribute="bottom" constant="-50.5" id="QdM-6q-KIA"/>
+                                            <constraint firstAttribute="bottom" secondItem="1iA-0w-EE5" secondAttribute="bottom" constant="20" symbolic="YES" id="TI4-WZ-CmW"/>
                                             <constraint firstItem="QTY-VQ-fL4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hfP-fq-uI9" secondAttribute="leading" constant="20" symbolic="YES" id="VOS-pt-y4l"/>
                                             <constraint firstItem="Wrm-5c-kMi" firstAttribute="centerX" secondItem="QTY-VQ-fL4" secondAttribute="centerX" id="XLW-AT-CNd"/>
+                                            <constraint firstItem="wfC-le-b4a" firstAttribute="centerX" secondItem="hfP-fq-uI9" secondAttribute="centerX" id="XX0-gW-OGf"/>
                                             <constraint firstItem="Wrm-5c-kMi" firstAttribute="firstBaseline" secondItem="QTY-VQ-fL4" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="bHY-cm-ffY"/>
                                             <constraint firstItem="lnk-kU-tEg" firstAttribute="top" secondItem="Wrm-5c-kMi" secondAttribute="bottom" constant="-30.5" id="efH-gn-dK1"/>
                                             <constraint firstAttribute="height" constant="260" id="jBq-zH-EO2"/>
+                                            <constraint firstItem="1iA-0w-EE5" firstAttribute="top" secondItem="wfC-le-b4a" secondAttribute="bottom" constant="8" symbolic="YES" id="jMM-dl-yfr"/>
                                             <constraint firstAttribute="bottom" secondItem="lnk-kU-tEg" secondAttribute="bottom" id="k7z-Yc-UOi"/>
                                             <constraint firstItem="lnk-kU-tEg" firstAttribute="leading" secondItem="hfP-fq-uI9" secondAttribute="leading" id="kyf-Hy-sJX"/>
                                             <constraint firstItem="zP0-fM-iR5" firstAttribute="leading" secondItem="hfP-fq-uI9" secondAttribute="leading" id="p9f-DQ-acu"/>
+                                            <constraint firstAttribute="trailing" secondItem="1iA-0w-EE5" secondAttribute="trailing" constant="20" symbolic="YES" id="qtH-DG-51l"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QTY-VQ-fL4" secondAttribute="trailing" constant="20" symbolic="YES" id="r2z-Jx-GSe"/>
+                                            <constraint firstItem="1iA-0w-EE5" firstAttribute="centerX" secondItem="hfP-fq-uI9" secondAttribute="centerX" id="ugB-CD-aUo"/>
                                             <constraint firstAttribute="trailing" secondItem="lnk-kU-tEg" secondAttribute="trailing" id="w1N-dK-teF"/>
                                             <constraint firstItem="QTY-VQ-fL4" firstAttribute="top" secondItem="hfP-fq-uI9" secondAttribute="top" constant="20" symbolic="YES" id="w4F-i0-14a"/>
                                             <constraint firstAttribute="trailing" secondItem="zP0-fM-iR5" secondAttribute="trailing" id="wVs-WL-ktV"/>
