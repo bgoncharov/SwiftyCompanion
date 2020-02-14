@@ -53,7 +53,9 @@ class ViewController: UIViewController {
             auth.getToken()
             
             // remove this segue
-            self.performSegue(withIdentifier: "segueToProfileVC", sender: self)
+            //self.performSegue(withIdentifier: "segueToProfileVC", sender: self)
+            searchTextField.text = "bogoncha"
+            self.searchButton.isEnabled = true
 
             
         }
