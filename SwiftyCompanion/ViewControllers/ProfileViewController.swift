@@ -17,12 +17,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var backgroundViewImage: UIView!
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var login: UILabel!
-    @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var email: UILabel!
     @IBOutlet weak var wallet: UILabel!
-    @IBOutlet weak var evalPoints: UILabel!
+    @IBOutlet weak var correctionPoints: UILabel!
     @IBOutlet weak var grade: UILabel!
     @IBOutlet weak var level: UILabel!
     @IBOutlet weak var levelProgressBar: UIProgressView!
@@ -30,6 +31,11 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var skillsTable: UITableView!
     @IBOutlet weak var projectsTable: UITableView!
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        backgroundViewImage.frame = backgroundView.bounds
+    }
   
     
     override func viewDidLoad() {
@@ -39,7 +45,7 @@ class ProfileViewController: UIViewController {
         avatar.layer.masksToBounds = true
         avatar.layer.borderColor = UIColor.white.cgColor
         avatar.layer.cornerRadius = avatar.frame.width / 2
-        backgroundView.backgroundColor = UIColor(patternImage: UIImage(named: "42_bg")!)
+        backgroundViewImage.backgroundColor = UIColor(patternImage: UIImage(named: "42_bg")!)
         levelProgressBar.transform = levelProgressBar.transform.scaledBy(x: 1, y: 3)
         levelProgressBar.layer.cornerRadius = levelProgressBar.frame.height / 2
         levelProgressBar.clipsToBounds = true
@@ -59,14 +65,14 @@ class ProfileViewController: UIViewController {
         if let login = json["login"].string {
             self.login.text = login
         }
-        if let phone = json["phone"].string {
-            self.phone.text = phone
+        if let email = json["email"].string {
+            self.email.text = email
         }
         if let wallet = json["wallet"].int {
             self.wallet.text = "Wallet: \(wallet)"
         }
         if let evalPoints = json["correction_point"].int {
-            self.evalPoints.text = "Points: \(evalPoints)"
+            self.correctionPoints.text = "Points: \(evalPoints)"
         }
         if let level = json["cursus_users"][0]["level"].float {
             let progress = modf(level).1
