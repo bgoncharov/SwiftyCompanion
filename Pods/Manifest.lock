@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.9.1)
+  - Locksmith (4.0.0)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Locksmith
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Locksmith
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 5f1f8caa20d1702d112a354cc837e414c4fd8ee9
+PODFILE CHECKSUM: 423fd41e4336f36f160b4e3b6adc76eb8d1b85a5
 
 COCOAPODS: 1.8.4

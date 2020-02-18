@@ -4,4 +4,5 @@ use_frameworks!
 target 'SwiftyCompanion' do
     pod 'SwiftyJSON', '~> 4.0'
     pod 'Alamofire'
+    pod 'Locksmith'
 end

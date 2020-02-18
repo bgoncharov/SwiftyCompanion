@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Locksmith
 
 class ProfileViewController: UIViewController {
     

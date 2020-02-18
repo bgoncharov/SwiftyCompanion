@@ -9,11 +9,15 @@
 import Foundation
 import SwiftyJSON
 import Alamofire
+import Locksmith
 
-class Auth {
+class Auth: NSObject {
 
+    private let userAccount = "myAccount"
     private var token = String()
-    private lazy var bearer = ["Authorization": "Bearer " + token]
+    private var bearer: [String: String] {
+        return ["Authorization": "Bearer " + token]
+    }
     private var authURL = "https://api.intra.42.fr/oauth/token"
     private var tokenInfoURL: String { return authURL + "/info"}
     
@@ -25,6 +29,9 @@ class Auth {
     ]
 
     func getToken() {
+        if let validTocken = Locksmith.loadDataForUserAccount(userAccount: userAccount), let tmp = validTocken["token"] as? String {
+            token = tmp
+        }
         if token.isEmpty {
             Alamofire.request(authURL, method: .post, parameters: parameters).validate().responseJSON { (responseJSON) in
                 switch responseJSON.result {
@@ -32,7 +39,12 @@ class Auth {
                     let json = JSON(value)
                     if let token = json["access_token"].string {
                         self.token = token
-                        print("New token was generated: ", self.token)
+                        do {
+                            try Locksmith.saveData(data: ["token" : token], forUserAccount: self.userAccount)
+                        } catch {
+                            print("Unable to save the token")
+                        }
+                        print("New token just generated: ", self.token)
                     }
                     
                 case .failure:
@@ -66,24 +78,41 @@ class Auth {
                 let json = JSON(value)
                 print("The token will expire in: ", json["expires_in_seconds"], " seconds")
             case .failure:
-                print("Token invalid. Getting a new one.")
+                print("Token is invalid. Getting a new one.")
+                self.token = ""
+                do {
+                    try Locksmith.deleteDataForUserAccount(userAccount: self.userAccount)
+                } catch {
+                    print("There is an error: ", error)
+                }
+                print("Wrong token was deleted from keychain")
                 self.getToken()
             }
         }
     }
     
-    func searchLogin(_ login: String, completionHandler: @escaping (JSON?) -> Void ) {
-        let loginURL = "https://api.intra.42.fr/v2/users/" + login.replacingOccurrences(of: " ", with: "")
-        print(loginURL)
-        print(token)
+    func searchLogin(_ login: String, completionHandler: @escaping (JSON?, String?) -> Void ) {
+        let loginURL = "https://api.intra.42.fr/v2/users/" + login
+        print("Login URL -> ", loginURL)
+        print("Token: -> ", token)
         Alamofire.request(loginURL, headers: bearer).validate().responseJSON { (responseJSON) in
             switch responseJSON.result {
             case .success(let value):
-                print("User JSON -> ", JSON(value))
-                completionHandler(JSON(value))
-            case .failure(let error):
-                completionHandler(nil)
-                print("Users doesn't exist. ", error.localizedDescription)
+               // print("User JSON -> ", JSON(value))
+                completionHandler(JSON(value), nil)
+            case .failure:
+                var errMsg: String?
+                var response = JSON()
+                if let data = responseJSON.data {
+                    do {
+                        response = try JSON(data: data)
+                    } catch (let error) {
+                        print("Error due creating JSON obj", error)
+                    }
+                    debugPrint(response)
+                    errMsg = response["message"].string
+                }
+                completionHandler(nil, errMsg)
             }
         }
     }
