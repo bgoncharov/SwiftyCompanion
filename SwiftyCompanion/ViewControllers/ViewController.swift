@@ -51,19 +51,8 @@ class ViewController: UIViewController {
             super.viewDidLoad()
             searchButton.isEnabled = false
             self.view.backgroundColor = UIColor(patternImage: UIImage(named: "42_bg")!)
-//            do {
-//                try Locksmith.updateData(data: ["token" : "9308708acc14ee02fc736e48515959068ddb770c6e44be93a79fdec2e2836f31"], forUserAccount: "myAccount")
-//            } catch {
-//                print("Can't save token")
-//            }
-            auth.getToken()
-            
-            // remove this segue
-            //self.performSegue(withIdentifier: "segueToProfileVC", sender: self)
-            searchTextField.text = "bogoncha"
-            self.searchButton.isEnabled = true
 
-            
+            auth.getToken()
         }
         
         override func viewWillAppear(_ animated: Bool) {
