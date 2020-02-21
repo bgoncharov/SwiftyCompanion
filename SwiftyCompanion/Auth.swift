@@ -27,20 +27,27 @@ class Auth: NSObject {
     "client_secret": "63509e7ff509415cae5cb43cc8e24ac2daa4892825b626394393a65201e7d902",
     "scope": "public"
     ]
+    
+    func checkTockInKC() {
+        let userData = Locksmith.loadDataForUserAccount(userAccount: userAccount)
+        if let value = userData?["token"] as? String {
+            token = value
+        } else {
+            token = ""
+        }
+    }
 
     func getToken() {
-        if let validTocken = Locksmith.loadDataForUserAccount(userAccount: userAccount), let tmp = validTocken["token"] as? String {
-            token = tmp
-        }
+        checkTockInKC()
         if token.isEmpty {
             Alamofire.request(authURL, method: .post, parameters: parameters).validate().responseJSON { (responseJSON) in
                 switch responseJSON.result {
                 case .success(let value):
                     let json = JSON(value)
-                    if let token = json["access_token"].string {
-                        self.token = token
+                    if let value = json["access_token"].string {
+                        self.token = value
                         do {
-                            try Locksmith.saveData(data: ["token" : token], forUserAccount: self.userAccount)
+                            try Locksmith.saveData(data: ["token" : value], forUserAccount: self.userAccount)
                         } catch {
                             print("Unable to save the token")
                         }
@@ -79,7 +86,6 @@ class Auth: NSObject {
                 print("The token will expire in: ", json["expires_in_seconds"], " seconds")
             case .failure:
                 print("Token is invalid. Getting a new one.")
-                self.token = ""
                 do {
                     try Locksmith.deleteDataForUserAccount(userAccount: self.userAccount)
                 } catch {
