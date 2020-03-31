@@ -3,7 +3,7 @@ IOS application that retrieve the information of 42 student, using the 42 API. 4
 
 ## Installation
 
-```
+```bash
 git clone https://github.com/bgoncharov/SwiftyCompanion.git
 cd ~/SwiftyCompanion
 open SwiftyCompanion.xcworkspace
