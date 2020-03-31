@@ -29,3 +29,7 @@ Bonus :
 - [x] Recreate token at expire date
 - [x] Design
 - [x] Srcollview
+
+## Examples
+
+Try searching bogoncha, kdenisov, vlazuka
