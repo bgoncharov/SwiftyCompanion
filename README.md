@@ -32,4 +32,4 @@ Bonus :
 
 ## Examples
 
-Try searching bogoncha, kdenisov, vlazuka
+Try searching bogoncha, kdenisov, vlazuka.
