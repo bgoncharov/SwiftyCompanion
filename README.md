@@ -1,8 +1,11 @@
 # SwiftyCompanion
-IOS application that retrieve the information of 42 student, using the 42 API. 42 Silicon Valley project.
+IOS application that retrieve the information of 42 student, using the [42 API](https://api.intra.42.fr/apidoc). 42 Silicon Valley project.
 
 ![First screen](https://github.com/bgoncharov/Images/blob/master/SwiftyCompanion/gif/1.gif)
 ![First screen](https://github.com/bgoncharov/Images/blob/master/SwiftyCompanion/gif/2.gif)
+
+I spent about 6 days for this project. Actyaly it was one of my first IOS apllications. 
+SwiftyCompanion have 2 Views: first View uses for login input and second View shows student information. Second View uses ScrollView and two TableViews to display student skills and finished projects. Also at this project I used three Pods: Alamofire, Locksmith, SwiftyJSON.
 
 ## Installation
 
