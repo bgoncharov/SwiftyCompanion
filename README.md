@@ -1,7 +1,7 @@
 # SwiftyCompanion
 IOS application that retrieve the information of 42 student, using the [42 API](https://api.intra.42.fr/apidoc). 42 Silicon Valley project.
 
-<img src="https://github.com/bgoncharov/Images/blob/master/SwiftyCompanion/gif/1.gif" height="300">
+<img src="https://github.com/bgoncharov/Images/blob/master/SwiftyCompanion/gif/1.gif" height="500">
 ![First screen](https://github.com/bgoncharov/Images/blob/master/SwiftyCompanion/gif/2.gif)
 
 I spent about 6 days for this project. Actyaly it was one of my first IOS apllications. 
