@@ -2,6 +2,7 @@
 IOS application that retrieve the information of 42 student, using the 42 API. 42 Silicon Valley project.
 
 ![First screen](https://github.com/bgoncharov/Images/blob/master/SwiftyCompanion/gif/1.gif)
+![First screen](https://github.com/bgoncharov/Images/blob/master/SwiftyCompanion/gif/2.gif)
 
 ## Installation
 
