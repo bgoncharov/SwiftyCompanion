@@ -1,5 +1,5 @@
 # SwiftyCompanion
-IOS application that retrieve the information of 42 student, using the [42 API](https://api.intra.42.fr/apidoc). 42 Silicon Valley project.
+IOS application that retrieve the information of 42 student, using the [42 API](https://api.intra.42.fr/apidoc).
 
 ![First View](https://github.com/bgoncharov/Images/blob/master/SwiftyCompanion/gif/1.gif)
 ![Second View](https://github.com/bgoncharov/Images/blob/master/SwiftyCompanion/gif/2.gif)
