@@ -5,7 +5,7 @@ IOS application that retrieve the information of 42 student, using the [42 API](
 ![Second View](https://github.com/bgoncharov/Images/blob/master/SwiftyCompanion/gif/2.gif)
 
 I spent about 6 days for this project. Actyaly it was one of my first IOS apllications. 
-`SwiftyCompanion` have 2 Views: first View uses for login input and second View shows student information. Second View uses `ScrollView` and two `TableViews` to display student skills and finished projects. Also at this project I used three Pods: [Alamofire](https://github.com/Alamofire/Alamofire), [Locksmith](https://github.com/Alamofire/Alamofire), [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON).
+`SwiftyCompanion` has two Views: first View uses for login input and second View shows student information. Second View uses `ScrollView` and two `TableViews` to display student skills and finished projects. Also at this project I used three Pods: [Alamofire](https://github.com/Alamofire/Alamofire), [Locksmith](https://github.com/Alamofire/Alamofire), [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON).
 
 Alamofire handles HTTPS request. SwiftyJSON helps to deal with JSON data recieved from the server. Locksmith pod works with tokens, and there is no need to create a token for each query.
 
